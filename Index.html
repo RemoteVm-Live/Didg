@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مرکز تخصصی فروش دیجیریدو. کاوش در مجموعه‌ای بی‌نظیر از دیجیریدوهای دست‌ساز چوبی، فایبرگلاس و مسافرتی با صدایی اصیل و طراحی مدرن.">
+    <meta name="keywords" content="خرید دیجیریدو, فروش دیجیریدو, دیجیریدو دست ساز, دیجیریدو حرفه‌ای, didgeridoocenter.ir">
+    <title>مرکز دیجیریدو ایران | فروشگاه آنلاین دیجیریدوهای حرفه‌ای</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --primary-light: #D2691E;
+            --primary-dark: #5D2906;
+            --accent-color: #C19A6B;
+            --text-light: #F8F0E5;
+            --text-dark: #2C2A27;
+            --bg-light: #FAF9F7;
+            --bg-dark: #1E1B17;
+            --bg-gradient: linear-gradient(135deg, var(--bg-dark), #3C2F1F);
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition-fast: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-smooth: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --font-heading: 'Vazirmatn', sans-serif;
+            --font-body: 'Vazirmatn', sans-serif;
+        }
+
+        /* Reset and Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 1.6rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+            direction: rtl;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-fast);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        button, .btn {
+            cursor: pointer;
+            font-family: var(--font-body);
+            border: none;
+            background: none;
+            transition: all var(--transition-fast);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 10rem 0;
+            position: relative;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        .text-primary { color: var(--primary-color); }
+        .text-accent { color: var(--accent-color); }
+        .bg-dark { background-color: var(--bg-dark); }
+        .bg-light { background-color: var(--bg-light); }
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mb-3 { margin-bottom: 3rem; }
+        .mb-4 { margin-bottom: 4rem; }
+        .mb-5 { margin-bottom: 5rem; }
+        .hidden { opacity: 0; visibility: hidden; }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem 3rem;
+            border-radius: 5rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-3px);
+        }
+
+        .btn i {
+            margin-right: 0.8rem;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%, -50%);
+            transform-origin: 50% 50%;
+            z-index: -1;
+        }
+
+        .btn:hover::after {
+            animation: ripple 1s ease-out;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(20, 20);
+                opacity: 0;
+            }
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 2rem 0;
+            transition: all var(--transition-fast);
+        }
+
+        .header.scrolled {
+            background-color: rgba(30, 27, 23, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+
+        .logo-icon {
+            font-size: 3rem;
+            margin-left: 1rem;
+            color: var(--primary-light);
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 2.4rem;
+            color: var(--text-light);
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            font-size: 1.6rem;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-light);
+            transition: width var(--transition-fast);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .cart-btn {
+            margin-right: 2rem;
+            color: var(--text-light);
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--primary-light);
+            color: var(--text-light);
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: var(--bg-gradient);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1504746596522-b7412fdd4a09?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            animation: pulse 15s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .hero-title {
+            font-size: 6rem;
+            font-weight: 900;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 0.2s;
+        }
+
+        .hero-subtitle {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 0.4s;
+        }
+
+        .hero-text {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 0.6s;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards 0.8s;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-light);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--bg-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background-color: var(--bg-light);
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 8rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.8rem;
+            color: var(--primary-light);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-heading {
+            font-size: 4.2rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        .section-description {
+            font-size: 1.8rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #5c5853;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+        }
+
+        .feature-card {
+            padding: 3rem;
+            background-color: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--primary-color);
+            transition: width var(--transition-smooth);
+            z-index: -1;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px) !important;
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-card:hover::before {
+            width: 100%;
+        }
+
+        .feature-card:hover .feature-icon,
+        .feature-card:hover .feature-title,
+        .feature-card:hover .feature-text {
+            color: var(--text-light);
+        }
+
+        .feature-icon {
+            font-size: 4.8rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            transition: all var(--transition-smooth);
+        }
+
+        .feature-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            transition: all var(--transition-smooth);
+        }
+
+        .feature-text {
+            font-size: 1.6rem;
+            transition: all var(--transition-smooth);
+        }
+
+        /* Products Section */
+        .products {
+            background-color: #F5F2ED;
+            position: relative;
+        }
+
+        .products::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(193, 154, 107, 0.1);
+            border-radius: 50%;
+            top: 50px;
+            right: -150px;
+        }
+
+        .products::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(139, 69, 19, 0.1);
+            border-radius: 50%;
+            bottom: 100px;
+            left: -100px;
+        }
+
+        .products-filter {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .filter-btn {
+            padding: 1rem 2.5rem;
+            border-radius: 5rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            background-color: transparent;
+            border: 1px solid #DDD;
+            transition: all var(--transition-fast);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-color: var(--primary-color);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-fast);
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) !important;
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-image {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-smooth);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            padding: 0.5rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 5rem;
+            z-index: 1;
+        }
+
+        .product-content {
+            padding: 2.5rem;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .product-description {
+            font-size: 1.4rem;
+            color: #5c5853;
+            margin-bottom: 2rem;
+            height: 4.2rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .product-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .product-btn {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--text-dark);
+            background-color: #f0ebe4;
+            transition: all var(--transition-fast);
+        }
+
+        .product-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--bg-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.6));
+        }
+
+        .about-badge {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 12rem;
+            height: 12rem;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-weight: 700;
+            text-align: center;
+            animation: rotate 15s linear infinite;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        .about-badge-text {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            transform: rotate(-5deg);
+            line-height: 1.2;
+        }
+
+        .about-badge-year {
+            font-size: 2.4rem;
+            margin-top: 0.5rem;
+        }
+
+        .about-content {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+
+        .about-title {
+            font-size: 4.2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .about-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 8rem;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+
+        .about-text {
+            font-size: 1.7rem;
+            color: #5c5853;
+            margin-bottom: 3rem;
+        }
+
+        .about-signature {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-top: 2rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background-color: #F5F2ED;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 250px);
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-sm);
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 2;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all var(--transition-smooth);
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+            opacity: 0;
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+            transition: all var(--transition-fast);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-caption {
+            color: var(--text-light);
+            font-size: 1.6rem;
+            font-weight: 500;
+            transform: translateY(20px);
+            transition: all var(--transition-fast);
+            transition-delay: 0.1s;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            padding: 8rem 0 2rem;
+            position: relative;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-logo {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo-icon {
+            font-size: 3.6rem;
+            margin-left: 1rem;
+            color: var(--primary-light);
+        }
+
+        .footer-text {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #a8a29e;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-link {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            background-color: rgba(255,255,255,0.1);
+            color: var(--text-light);
+            transition: all var(--transition-fast);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-title {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 5rem;
+            height: 2px;
+            background-color: var(--primary-light);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .footer-link {
+            color: #a8a29e;
+            font-size: 1.5rem;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-link i {
+            margin-left: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-light);
+            transform: translateX(-5px);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            background-color: rgba(255,255,255,0.1);
+            color: var(--primary-light);
+        }
+
+        .contact-text {
+            font-size: 1.5rem;
+            color: #a8a29e;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 1.4rem;
+            color: #a8a29e;
+        }
+
+        .footer-bottom a {
+            color: var(--primary-light);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 3rem;
+            left: 3rem;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-fast);
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s forwards;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            html { font-size: 58%; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-top { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 992px) {
+            html { font-size: 56%; }
+            .about-grid { grid-template-columns: 1fr; gap: 4rem; }
+            .about-image { max-width: 600px; margin: 0 auto; }
+        }
+
+        @media (max-width: 768px) {
+            html { font-size: 54%; }
+            .hero-title { font-size: 4.8rem; }
+            .features-grid { grid-template-columns: 1fr; }
+            .nav-toggle { display: block; }
+            .nav { 
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: var(--bg-dark);
+                padding: 10rem 3rem;
+                transition: all var(--transition-fast);
+                z-index: 100;
+            }
+            .nav.active { right: 0; }
+            .nav-list {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .nav-link { font-size: 2rem; }
+            .cart-btn { margin-right: 0; }
+            .hero-cta { flex-direction: column; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item:nth-child(1),
+            .gallery-item:nth-child(4) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+            .footer-top { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 576px) {
+            .container { padding: 0 1.5rem; }
+            .hero-title { font-size: 3.6rem; }
+            .section-heading { font-size: 3.2rem; }
+            .about-title { font-size: 3.2rem; }
+            .about-badge { width: 8rem; height: 8rem; }
+            .about-badge-year { font-size: 1.8rem; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-drum logo-icon"></i>
+                    مرکز دیجیریدو
+                </a>
+                <button class="nav-toggle" aria-label="منوی موبایل">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">خانه</a></li>
+                        <li><a href="#features" class="nav-link">ویژگی‌ها</a></li>
+                        <li><a href="#products" class="nav-link">محصولات</a></li>
+                        <li><a href="#about" class="nav-link">درباره ما</a></li>
+                        <li><a href="#gallery" class="nav-link">گالری</a></li>
+                        <li><a href="#footer" class="nav-link">تماس</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="cart-btn">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">نفس زمین را <br>احساس کن</h1>
+                <h2 class="hero-subtitle">آوای اصیل دیجیریدو، روح طبیعت در دستان شما</h2>
+                <p class="hero-text">کالکشن منحصربه‌فرد دیجیریدوهای دست‌ساز، خلق شده برای نوازندگان حرفه‌ای و علاقه‌مندان به موسیقی. سازهایی با صدای عمیق و رزونانس بی‌نظیر که با دست هنرمندان ایرانی ساخته شده‌اند.</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        مشاهده محصولات
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        <i class="fa-solid fa-circle-info"></i>
+                        درباره ما
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#features" class="hero-scroll">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">چرا دیجیریدوی ما؟</span>
+                <h2 class="section-heading">ویژگی‌های منحصربه‌فرد</h2>
+                <p class="section-description">سازهایی با کیفیت استثنایی که تجربه‌ای بی‌نظیر از نواختن را برای شما به ارمغان می‌آورند</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-delay="0">
+                    <i class="fa-solid fa-music feature-icon"></i>
+                    <h3 class="feature-title">صدای اصیل و عمیق</h3>
+                    <p class="feature-text">هر دیجیریدو با دقت برای ایجاد صدایی اصیل، رزونانس کامل و هارمونی‌های طبیعی طراحی و ساخته شده است.</p>
+                </div>
+
+                <div class="feature-card" data-delay="200">
+                    <i class="fa-solid fa-paint-brush feature-icon"></i>
+                    <h3 class="feature-title">هنر دست هنرمندان</h3>
+                    <p class="feature-text">هر دیجیریدو یک اثر هنری منحصربه‌فرد است که با عشق و دقت توسط استادکاران ماهر ساخته شده است.</p>
+                </div>
+
+                <div class="feature-card" data-delay="400">
+                    <i class="fa-solid fa-tree feature-icon"></i>
+                    <h3 class="feature-title">متریال طبیعی و با کیفیت</h3>
+                    <p class="feature-text">استفاده از بهترین چوب‌های طبیعی و پایدار برای ساخت سازهایی با عمر طولانی و صدای فوق‌العاده.</p>
+                </div>
+
+                <div class="feature-card" data-delay="600">
+                    <i class="fa-solid fa-user-graduate feature-icon"></i>
+                    <h3 class="feature-title">آموزش اختصاصی</h3>
+                    <p class="feature-text">با خرید هر دیجیریدو، دسترسی به ویدیوهای آموزشی اختصاصی برای یادگیری تکنیک‌های نواختن خواهید داشت.</p>
+                </div>
+
+                <div class="feature-card" data-delay="800">
+                    <i class="fa-solid fa-truck-fast feature-icon"></i>
+                    <h3 class="feature-title">ارسال به سراسر ایران</h3>
+                    <p class="feature-text">ساز خود را با بسته‌بندی ایمن و در سریع‌ترین زمان ممکن در هر نقطه از ایران تحویل بگیرید.</p>
+                </div>
+
+                <div class="feature-card" data-delay="1000">
+                    <i class="fa-solid fa-handshake feature-icon"></i>
+                    <h3 class="feature-title">گارانتی اصالت</h3>
+                    <p class="feature-text">تمامی محصولات ما دارای گارانتی اصالت و کیفیت هستند تا با خیال راحت خرید کنید.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section products">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">محصولات ما</span>
+                <h2 class="section-heading">دیجیریدوهای حرفه‌ای</h2>
+                <p class="section-description">از مدل‌های چوبی سنتی تا طراحی‌های مدرن فایبرگلاس، متناسب با هر سلیقه و سطح مهارت</p>
+            </div>
+
+            <div class="products-filter">
+                <button class="filter-btn active" data-filter="all">همه محصولات</button>
+                <button class="filter-btn" data-filter="wooden">چوبی</button>
+                <button class="filter-btn" data-filter="fiberglass">فایبرگلاس</button>
+                <button class="filter-btn" data-filter="travel">مسافرتی</button>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-category="wooden" data-delay="0">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1534793713982-fcd1a8891a18?q=80&w=1780" alt="دیجیریدو اکالیپتوس">
+                        <span class="product-tag">پرفروش</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">دیجیریدو اکالیپتوس - نت D</h3>
+                        <p class="product-description">ساخته شده از چوب اکالیپتوس با طراحی سنتی استرالیایی و صدای عمیق</p>
+                        <div class="product-meta">
+                            <span class="product-price">۲,۹۵۰,۰۰۰ تومان</span>
+                            <div class="product-buttons">
+                                <button class="product-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="product-btn" aria-label="افزودن به سبد خرید">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fiberglass" data-delay="200">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551895541-53ac843b9c32?q=80&w=1887" alt="دیجیریدو فایبرگلاس">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">دیجیریدو فایبرگلاس - نت C</h3>
+                        <p class="product-description">سبک و بادوام با طراحی مدرن و رنگ‌بندی متنوع، مناسب برای تازه‌کاران</p>
+                        <div class="product-meta">
+                            <span class="product-price">۱,۷۰۰,۰۰۰ تومان</span>
+                            <div class="product-buttons">
+                                <button class="product-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="product-btn" aria-label="افزودن به سبد خرید">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="travel" data-delay="400">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1621618626566-5067b99db75d?q=80&w=1887" alt="دیجیریدو مسافرتی">
+                        <span class="product-tag">جدید</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">دیجیریدو مسافرتی (تلسکوپی)</h3>
+                        <p class="product-description">قابل جدا شدن به چند قطعه، مناسب برای سفر و حمل آسان با کیف مخصوص</p>
+                        <div class="product-meta">
+                            <span class="product-price">۱,۴۵۰,۰۰۰ تومان</span>
+                            <div class="product-buttons">
+                                <button class="product-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="product-btn" aria-label="افزودن به سبد خرید">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="wooden" data-delay="600">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551669000-ce3c0cb47337?q=80&w=1887" alt="دیجیریدو استودیویی">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">دیجیریدو استودیویی - نت F</h3>
+                        <p class="product-description">طراحی حرفه‌ای با صدادهی فوق‌العاده، مناسب برای ضبط استودیویی و اجرای زنده</p>
+                        <div class="product-meta">
+                            <span class="product-price">۴,۵۰۰,۰۰۰ تومان</span>
+                            <div class="product-buttons">
+                                <button class="product-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="product-btn" aria-label="افزودن به سبد خرید">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="wooden" data-delay="800">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1519677584237-752f8853252e?q=80&w=2070" alt="دیجیریدو طرح حکاکی">
+                        <span class="product-tag">محدود</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">دیجیریدو طرح حکاکی شده - نت G</h3>
+                        <p class="product-description">با طرح‌های سنتی دست‌حکاکی شده و رنگ‌آمیزی طبیعی، هر ساز منحصر به فرد است</p>
+                        <div class="product-meta">
+                            <span class="product-price">۵,۲۰۰,۰۰۰ تومان</span>
+                            <div class="product-buttons">
+                                <button class="product-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="product-btn" aria-label="افزودن به سبد خرید">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fiberglass" data-delay="1000">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1625216099639-0262ca58be91?q=80&w=1887" alt="دیجیریدو آموزشی">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">دیجیریدو آموزشی - پکیج کامل</h3>
+                        <p class="product-description">مناسب برای مبتدیان، همراه با کتابچه و فیلم آموزشی، موم زنبور عسل و کیف حمل</p>
+                        <div class="product-meta">
+                            <span class="product-price">۱,۹۰۰,۰۰۰ تومان</span>
+                            <div class="product-buttons">
+                                <button class="product-btn" aria-label="افزودن به علاقه‌مندی‌ها">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="product-btn" aria-label="افزودن به سبد خرید">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1521408860804-dcdc8accd833?q=80&w=2070" alt="کارگاه ساخت دیجیریدو">
+                    <div class="about-badge">
+                        <div class="about-badge-text">از سال</div>
+                        <div class="about-badge-year">۱۳۹۵</div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="about-title">داستان ما</h2>
+                    <p class="about-text">ما در "مرکز دیجیریدو" یک گروه کوچک از هنرمندان و نوازندگان هستیم که باور داریم هر درخت، داستانی برای گفتن دارد. ما این داستان‌ها را به سازهایی تبدیل می‌کنیم که نه تنها موسیقی، بلکه روح طبیعت را به جریان می‌اندازند.</p>
+                    <p class="about-text">سفر ما از سال ۱۳۹۵ آغاز شد، زمانی که اولین دیجیریدو را از یک تنه درخت اکالیپتوس ساختیم. امروز، ما طیف گسترده‌ای از دیجیریدوها را با استفاده از تکنیک‌های سنتی و مدرن تولید می‌کنیم و افتخار می‌کنیم که صدای اصیل این ساز باستانی را به خانه‌های ایرانیان می‌آوریم.</p>
+                    <p class="about-text">هر ساز، حاصل ساعت‌ها کار دقیق و مراقبه است تا صدایی منحصربه‌فرد و الهام‌بخش خلق شود. ما معتقدیم که دیجیریدو بیش از یک ساز است؛ وسیله‌ای برای ارتباط با طبیعت، تنفس آگاهانه و آرامش درونی است.</p>
+                    <a href="#" class="btn btn-primary">
+                        <i class="fa-solid fa-book-open"></i>
+                        مطالعه بیشتر
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <div class="gallery-title section-title">
+                <span class="section-subtitle">گالری تصاویر</span>
+                <h2 class="section-heading">لحظات به یادماندنی با دیجیریدو</h2>
+                <p class="section-description">تجربیات مشتریان ما و نگاهی به پشت صحنه ساخت دیجیریدوهای دست‌ساز</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-delay="0">
+                    <img src="https://images.unsplash.com/photo-1633193330454-b8c1adce125f?q=80&w=2070" alt="نواختن دیجیریدو در طبیعت" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">نواختن دیجیریدو در دل طبیعت</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-delay="200">
+                    <img src="https://images.unsplash.com/photo-1603123853880-a92fafb7809f?q=80&w=2069" alt="کارگاه ساخت دیجیریدو" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">فرآیند ساخت در کارگاه ما</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-delay="400">
+                    <img src="https://images.unsplash.com/photo-1626626912302-d51edbcb2f0c?q=80&w=2075" alt="اجرای زنده با دیجیریدو" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">اجرای زنده در کنسرت موسیقی جهانی</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-delay="600">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073" alt="نواختن دیجیریدو در ساحل" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">هارمونی امواج دریا و نوای دیجیریدو</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-delay="800">
+                    <img src="https://images.unsplash.com/photo-1618939304347-e91b1f33d2ab?q=80&w=1778" alt="کلاس آموزشی دیجیریدو" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">کارگاه‌های آموزشی ما</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">
+                        <i class="fa-solid fa-drum footer-logo-icon"></i>
+                        مرکز دیجیریدو
+                    </a>
+                    <p class="footer-text">مرکز تخصصی فروش دیجیریدو و آموزش نواختن این ساز باستانی با بیش از 7 سال تجربه در ارائه محصولات با کیفیت و خدمات ویژه به علاقه‌مندان موسیقی.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-1">
+                    <h3 class="footer-title">دسترسی سریع</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>صفحه اصلی</a></li>
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>محصولات</a></li>
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>درباره ما</a></li>
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>گالری</a></li>
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>وبلاگ</a></li>
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>تماس با ما</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-2">
+                    <h3 class="footer-title">خدمات ما</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>فروش دیجیریدو</a></li>
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>آموزش نواختن</a></li>
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>سفارش ساخت</a></li>
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>تعمیر و نگهداری</a></li>
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>مشاوره خرید</a></li>
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-left"></i>ارسال به سراسر کشور</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3 class="footer-title">تماس با ما</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-text">
+                            تهران، خیابان ولیعصر، نرسیده به میدان ونک، پلاک 125
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            021-88776655 - 09123456789
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            info@didgeridoocenter.ir
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 مرکز دیجیریدو ایران. تمامی حقوق محفوظ است.</p>
+                <p>طراحی و توسعه: <a href="#">استودیو طراحی وب دیجیتال</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="بازگشت به بالا">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+        
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Header Scroll Effect
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                }
+            });
+        });
+        
+        // Active Link Highlight
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Product Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(filterBtn => {
+                    filterBtn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filterValue = btn.getAttribute('data-filter');
+                
+                productCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Scroll Animation
+        const animateElements = (elements, threshold = 0.1) => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const delay = element.getAttribute('data-delay') || 0;
+                        
+                        setTimeout(() => {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateY(0)';
+                        }, delay);
+                        
+                        observer.unobserve(element);
+                    }
+                });
+            }, { threshold });
+            
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        };
+        
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            animateElements(document.querySelectorAll('.feature-card'));
+            animateElements(document.querySelectorAll('.product-card'));
+            animateElements(document.querySelectorAll('.gallery-item'));
+            
+            // About section animation
+            const aboutImage = document.querySelector('.about-image');
+            const aboutContent = document.querySelector('.about-content');
+            
+            const aboutObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    aboutImage.style.opacity = '1';
+                    aboutImage.style.transform = 'translateX(0)';
+                    
+                    setTimeout(() => {
+                        aboutContent.style.opacity = '1';
+                        aboutContent.style.transform = 'translateX(0)';
+                    }, 300);
+                    
+                    aboutObserver.unobserve(entries[0].target);
+                }
+            }, { threshold: 0.2 });
+            
+            aboutObserver.observe(document.querySelector('.about-grid'));
+        });
+    </script>
+</body>
+</html>
