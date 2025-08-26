@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دیجیریدو مسافرتی | دیجیریدو سنتر</title>
+    <meta name="description" content="دیجیریدو مسافرتی تلسکوپی با قابلیت حمل آسان و صدای با کیفیت، مناسب برای سفر و اجراهای خارج از منزل">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --secondary: #0f766e;
+            --accent: #047857;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --easing: cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: 'Estedad', sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.7;
+            color: var(--gray-700);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .h-full {
+            height: 100%;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .z-10 {
+            z-index: 10;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .gap-2 {
+            gap: 2rem;
+        }
+
+        .gap-4 {
+            gap: 4rem;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mt-4 {
+            margin-top: 4rem;
+        }
+
+        .mt-8 {
+            margin-top: 8rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 4rem;
+        }
+
+        .py-2 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .py-4 {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .py-8 {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+
+        .rounded-lg {
+            border-radius: 1rem;
+        }
+
+        .rounded-xl {
+            border-radius: 1.5rem;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .shadow {
+            box-shadow: var(--shadow);
+        }
+
+        .shadow-md {
+            box-shadow: var(--shadow-md);
+        }
+
+        .shadow-lg {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .bg-white {
+            background-color: white;
+        }
+
+        .bg-gray-100 {
+            background-color: var(--gray-100);
+        }
+
+        .bg-primary {
+            background-color: var(--primary);
+        }
+
+        .bg-secondary {
+            background-color: var(--secondary);
+        }
+
+        .bg-accent {
+            background-color: var(--accent);
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .text-secondary {
+            color: var(--secondary);
+        }
+
+        .text-accent {
+            color: var(--accent);
+        }
+
+        .text-gray-400 {
+            color: var(--gray-400);
+        }
+
+        .text-gray-500 {
+            color: var(--gray-500);
+        }
+
+        .text-dark {
+            color: var(--dark);
+        }
+
+        .font-light {
+            font-weight: 300;
+        }
+
+        .font-medium {
+            font-weight: 500;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .text-xl {
+            font-size: 2rem;
+        }
+
+        .text-2xl {
+            font-size: 2.4rem;
+        }
+
+        .text-3xl {
+            font-size: 3rem;
+        }
+
+        .text-4xl {
+            font-size: 3.6rem;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-cols-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 2rem 0;
+            transition: var(--transition);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: var(--transition);
+        }
+
+        .logo-icon {
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            background: var(--primary);
+            color: white;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-size: 1.6rem;
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-right: 3rem;
+        }
+
+        .nav-btn {
+            font-size: 2rem;
+            color: var(--gray-700);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .nav-btn:hover {
+            color: var(--primary);
+        }
+
+        .btn-menu {
+            display: none;
+            font-size: 2.4rem;
+            color: var(--gray-700);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 1.5rem 0;
+            background-color: var(--gray-100);
+            margin-top: 8rem;
+        }
+
+        .breadcrumbs-list {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            font-size: 1.4rem;
+        }
+
+        .breadcrumbs-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumbs-item:not(:last-child)::after {
+            content: '/';
+            margin: 0 1rem;
+            color: var(--gray-400);
+        }
+
+        .breadcrumbs-link {
+            color: var(--gray-500);
+            transition: var(--transition);
+        }
+
+        .breadcrumbs-link:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumbs-current {
+            color: var(--gray-700);
+            font-weight: 500;
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 5rem 0;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        /* Product Gallery */
+        .product-gallery {
+            position: relative;
+        }
+
+        .gallery-main {
+            position: relative;
+            height: 50rem;
+            margin-bottom: 2rem;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-main-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-main-img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-badge {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent);
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border-radius: 5rem;
+            z-index: 2;
+        }
+
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .gallery-thumb {
+            height: 10rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: var(--transition);
+        }
+
+        .gallery-thumb.active {
+            border-color: var(--primary);
+        }
+
+        .gallery-thumb:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-thumb-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Product Info */
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .product-category {
+            font-size: 1.6rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .product-title {
+            font-size: 3.6rem;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-stars {
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+
+        .product-reviews {
+            color: var(--gray-500);
+            font-size: 1.4rem;
+        }
+
+        .product-price {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .product-description {
+            font-size: 1.6rem;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .product-features {
+            margin-bottom: 3rem;
+        }
+
+        .product-features-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-icon {
+            color: var(--accent);
+            font-size: 1.6rem;
+        }
+
+        .product-cta {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* WhatsApp Button */
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.5rem 3rem;
+            background-color: #25D366;
+            color: white;
+            border-radius: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-whatsapp i {
+            font-size: 2.2rem;
+        }
+
+        /* Tabs Section */
+        .product-tabs {
+            margin-top: 6rem;
+        }
+
+        .tabs-nav {
+            display: flex;
+            border-bottom: 1px solid var(--gray-300);
+            margin-bottom: 3rem;
+        }
+
+        .tab-btn {
+            padding: 1.5rem 3rem;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--gray-500);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .tab-btn:hover:not(.active) {
+            color: var(--gray-700);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .specs-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .spec-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .spec-title {
+            font-weight: 600;
+            color: var(--dark);
+            min-width: 12rem;
+        }
+
+        .spec-value {
+            color: var(--gray-600);
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 5rem 0;
+            background-color: var(--gray-100);
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .video-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .video-description {
+            font-size: 1.6rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        /* Audio Samples Section */
+        .audio-section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .audio-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .audio-card {
+            background-color: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .audio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .audio-image {
+            height: 20rem;
+            overflow: hidden;
+        }
+
+        .audio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .audio-card:hover .audio-image img {
+            transform: scale(1.05);
+        }
+
+        .audio-content {
+            padding: 2rem;
+        }
+
+        .audio-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .audio-description {
+            font-size: 1.4rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+
+        .audio-player {
+            width: 100%;
+        }
+
+        /* Related Products */
+        .related-section {
+            padding: 5rem 0;
+            background-color: var(--gray-100);
+        }
+
+        .related-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-image {
+            height: 20rem;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-card-content {
+            padding: 2rem;
+        }
+
+        .product-card-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .product-card-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 0.8rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .product-card-btn:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 8rem 0 2rem;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 6rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-about {
+            font-size: 1.6rem;
+            color: var(--gray-400);
+            margin-bottom: 3rem;
+            max-width: 40ch;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-link {
+            width: 4rem;
+            height: 4rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        .footer-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-link {
+            font-size: 1.6rem;
+            color: var(--gray-400);
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.4rem;
+            color: var(--gray-500);
+        }
+
+        .footer-copyright a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 0.5rem;
+            transform: scale(0.9);
+            transition: transform 0.3s var(--easing);
+        }
+
+        .lightbox.active .lightbox-img {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 3rem;
+            color: white;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-btn {
+            font-size: 3rem;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .lightbox-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: white;
+            padding: 8rem 2rem 2rem;
+            transition: var(--transition);
+            z-index: 99;
+            box-shadow: var(--shadow-lg);
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .menu-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 2.4rem;
+            color: var(--dark);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .mobile-nav-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .mobile-nav-link {
+            font-size: 2rem;
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 0;
+            display: block;
+            border-bottom: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .mobile-nav-link:hover {
+            color: var(--primary);
+            padding-right: 1rem;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 98;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .product-container {
+                gap: 3rem;
+            }
+            
+            .related-products {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            html {
+                font-size: 56%;
+            }
+            
+            .nav-list {
+                display: none;
+            }
+            
+            .btn-menu {
+                display: block;
+            }
+            
+            .nav-buttons {
+                margin-right: 2rem;
+            }
+            
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-main {
+                height: 40rem;
+            }
+            
+            .video-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .audio-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .related-products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .specs-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .audio-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-cta {
+                flex-direction: column;
+            }
+            
+            .btn-whatsapp {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-main {
+                height: 30rem;
+            }
+            
+            .gallery-thumbs {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .related-products {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .tabs-nav {
+                flex-wrap: wrap;
+            }
+            
+            .tab-btn {
+                padding: 1rem 2rem;
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    دیجیریدو سنتر
+                </a>
+                
+                <button class="btn-menu" aria-label="منو">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">صفحه اصلی</a></li>
+                        <li><a href="#" class="nav-link">دسته‌بندی‌ها</a></li>
+                        <li><a href="#" class="nav-link">محصولات</a></li>
+                        <li><a href="#" class="nav-link">درباره ما</a></li>
+                        <li><a href="#" class="nav-link">تماس با ما</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-buttons">
+                    <button class="nav-btn" aria-label="جستجو">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="nav-btn" aria-label="پروفایل">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="menu-close" aria-label="بستن منو">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">صفحه اصلی</a></li>
+            <li><a href="#" class="mobile-nav-link">دسته‌بندی‌ها</a></li>
+            <li><a href="#" class="mobile-nav-link">محصولات</a></li>
+            <li><a href="#" class="mobile-nav-link">درباره ما</a></li>
+            <li><a href="#" class="mobile-nav-link">تماس با ما</a></li>
+        </ul>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-item">
+                    <a href="index.html" class="breadcrumbs-link">صفحه اصلی</a>
+                </li>
+                <li class="breadcrumbs-item">
+                    <a href="#" class="breadcrumbs-link">محصولات</a>
+                </li>
+                <li class="breadcrumbs-item">
+                    <a href="#" class="breadcrumbs-link">دیجیریدو مسافرتی</a>
+                </li>
+                <li class="breadcrumbs-item">
+                    <span class="breadcrumbs-current">دیجیریدو مسافرتی تلسکوپی</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-container">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="gallery-main">
+                        <span class="gallery-badge">پرفروش</span>
+                        <img src="https://images.unsplash.com/photo-1621618626566-5067b99db75d?q=80&w=1887" alt="دیجیریدو مسافرتی تلسکوپی - تصویر اصلی" class="gallery-main-img" id="mainImage">
+                    </div>
+                    <div class="gallery-thumbs">
+                        <div class="gallery-thumb active" data-img="https://images.unsplash.com/photo-1621618626566-5067b99db75d?q=80&w=1887">
+                            <img src="https://images.unsplash.com/photo-1621618626566-5067b99db75d?q=80&w=1887" alt="دیجیریدو مسافرتی - نمای 1" class="gallery-thumb-img">
+                        </div>
+                        <div class="gallery-thumb" data-img="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=1935">
+                            <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=1935" alt="دیجیریدو مسافرتی - نمای 2" class="gallery-thumb-img">
+                        </div>
+                        <div class="gallery-thumb" data-img="https://images.unsplash.com/photo-1519844911773-1dcefb620f0d?q=80&w=2069">
+                            <img src="https://images.unsplash.com/photo-1519844911773-1dcefb620f0d?q=80&w=2069" alt="دیجیریدو مسافرتی - نمای 3" class="gallery-thumb-img">
+                        </div>
+                        <div class="gallery-thumb" data-img="https://images.unsplash.com/photo-1534793713982-fcd1a8891a18?q=80&w=1780">
+                            <img src="https://images.unsplash.com/photo-1534793713982-fcd1a8891a18?q=80&w=1780" alt="دیجیریدو مسافرتی - نمای 4" class="gallery-thumb-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <span class="product-category">دیجیریدو مسافرتی / قابل حمل</span>
+                    <h1 class="product-title">دیجیریدو مسافرتی تلسکوپی</h1>
+                    
+                    <div class="product-rating">
+                        <div class="product-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="product-reviews">۱۸ دیدگاه</span>
+                    </div>
+                    
+                    <div class="product-price">۱,۴۵۰,۰۰۰ تومان</div>
+                    
+                    <p class="product-description">
+                        دیجیریدو مسافرتی تلسکوپی ما با طراحی منحصر به فرد و قابلیت جدا شدن به چند قطعه، امکان حمل آسان را فراهم می‌کند. این محصول با وجود سبکی و قابلیت حمل، صدایی اصیل و با کیفیت تولید می‌کند که برای تمرین و اجرا در سفر بسیار مناسب است. ساخته شده از مواد با کیفیت و مقاوم در برابر ضربه و تغییرات دما، همراه با کیف مخصوص حمل.
+                    </p>
+                    
+                    <div class="product-features">
+                        <h3 class="product-features-title">ویژگی‌های محصول</h3>
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                <span>قابل جدا شدن به ۳ قطعه برای حمل آسان</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                <span>طول کامل: ۱۲۰ سانتی‌متر، قطر دهانه: ۴ سانتی‌متر</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                <span>وزن سبک (حدود ۸۰۰ گرم) مناسب برای مسافرت</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                <span>ساخته شده از فایبرگلاس با مقاومت بالا</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                <span>همراه با کیف مخصوص حمل</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                <span>نت اصلی: C با قابلیت اجرای هارمونیک‌های متنوع</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-cta">
+                        <a href="https://wa.me/989195600767?text=سلام،%20میخواستم%20درباره%20محصول%20دیجیریدو%20مسافرتی%20تلسکوپی%20اطلاعات%20بیشتری%20کسب%20کنم" class="btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            سفارش از طریق واتساپ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="description">توضیحات تکمیلی</button>
+                    <button class="tab-btn" data-tab="specs">مشخصات فنی</button>
+                    <button class="tab-btn" data-tab="reviews">دیدگاه‌ها</button>
+                </div>
+                
+                <div class="tab-content active" id="description">
+                    <h3 class="mb-4">درباره دیجیریدو مسافرتی تلسکوپی</h3>
+                    <p>دیجیریدو مسافرتی تلسکوپی یک راه حل ایده‌آل برای نوازندگانی است که مایل به تمرین و اجرا در سفر هستند. این محصول با طراحی هوشمندانه، به سه قطعه قابل جداسازی تقسیم می‌شود که به راحتی در کیف مخصوص حمل قرار می‌گیرد و در کوله‌پشتی یا چمدان جای می‌گیرد.</p>
+
+                    <p class="mt-4">علی‌رغم ساختار قابل حمل، این دیجیریدو صدایی شگفت‌انگیز و با کیفیت تولید می‌کند که با نمونه‌های یکپارچه قابل مقایسه است. فناوری به کار رفته در اتصالات، از نشت هوا جلوگیری می‌کند و رزونانس صدا را حفظ می‌نماید.</p>
+
+                    <p class="mt-4">ساخته شده از فایبرگلاس با کیفیت بالا که در برابر رطوبت، دما و ضربات سهوی مقاوم است. این ویژگی باعث می‌شود برای استفاده در محیط‌های مختلف مانند ساحل، کوهستان یا اجراهای خیابانی مناسب باشد.</p>
+
+                    <p class="mt-4">نت اصلی این دیجیریدو C است، اما نوازندگان ماهر می‌توانند با تکنیک‌های مختلف، طیف وسیعی از صداها و هارمونیک‌ها را تولید کنند. طراحی داخلی آن به گونه‌ای است که برای اجرای تکنیک‌های پیشرفته مانند تنفس دایره‌ای و صداهای حیوانات مناسب است.</p>
+                </div>
+                
+                <div class="tab-content" id="specs">
+                    <h3 class="mb-4">مشخصات فنی</h3>
+                    <div class="specs-list">
+                        <div class="spec-item">
+                            <span class="spec-title">جنس:</span>
+                            <span class="spec-value">فایبرگلاس با روکش داخلی مخصوص</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">طول:</span>
+                            <span class="spec-value">۱۲۰ سانتی‌متر (باز شده)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">قطر دهانه:</span>
+                            <span class="spec-value">۴ سانتی‌متر</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">قطر انتها:</span>
+                            <span class="spec-value">۸ سانتی‌متر</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">وزن:</span>
+                            <span class="spec-value">حدود ۸۰۰ گرم</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">نت اصلی:</span>
+                            <span class="spec-value">C (دو)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">تعداد قطعات:</span>
+                            <span class="spec-value">۳ قطعه قابل جداسازی</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">نوع اتصال:</span>
+                            <span class="spec-value">پیچی با واشر آب‌بندی</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">ابعاد بسته‌بندی:</span>
+                            <span class="spec-value">۴۵×۱۵×۱۵ سانتی‌متر</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">اقلام همراه:</span>
+                            <span class="spec-value">کیف حمل، دفترچه راهنما، موم زنبور عسل</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">گارانتی:</span>
+                            <span class="spec-value">۱۲ ماه</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-title">کشور سازنده:</span>
+                            <span class="spec-value">ایران</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="reviews">
+                    <h3 class="mb-4">دیدگاه‌های کاربران</h3>
+                    <div class="reviews-list">
+                        <div class="review-item mb-4">
+                            <div class="review-header flex items-center justify-between mb-2">
+                                <div class="review-author flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="تصویر کاربر" width="50" height="50" style="border-radius: 50%; margin-left: 1rem;">
+                                    <div>
+                                        <h4 class="font-semibold">سعید محمدی</h4>
+                                        <div class="review-date text-gray-500 text-sm">۱۵ مرداد ۱۴۰۳</div>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star text-accent"></i>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                من این دیجیریدو مسافرتی رو برای سفرهام خریدم و واقعاً راضی هستم. سبک و راحت برای حمل و نقل، و صدای فوق‌العاده‌ای داره که اصلاً انتظارش رو نداشتم. اتصالات محکم هستن و هیچ نشتی هوا وجود نداره. برای کسانی که زیاد سفر می‌کنن، یک انتخاب عالیه.
+                            </p>
+                        </div>
+
+                        <div class="review-item mb-4">
+                            <div class="review-header flex items-center justify-between mb-2">
+                                <div class="review-author flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="تصویر کاربر" width="50" height="50" style="border-radius: 50%; margin-left: 1rem;">
+                                    <div>
+                                        <h4 class="font-semibold">مریم حسینی</h4>
+                                        <div class="review-date text-gray-500 text-sm">۷ تیر ۱۴۰۳</div>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="far fa-star text-accent"></i>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                کیفیت ساخت خیلی خوبه و طراحی هوشمندانه‌ای داره. تنها ایرادش اینه که گاهی اوقات برای جا انداختن قطعات کمی باید تلاش کرد، اما بعد از چند بار استفاده روان‌تر میشه. صدای تولید شده تقریباً به اندازه دیجیریدوهای یکپارچه خوبه. کیف همراهش هم کیفیت خوبی داره.
+                            </p>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-header flex items-center justify-between mb-2">
+                                <div class="review-author flex items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="تصویر کاربر" width="50" height="50" style="border-radius: 50%; margin-left: 1rem;">
+                                    <div>
+                                        <h4 class="font-semibold">امیر رضایی</h4>
+                                        <div class="review-date text-gray-500 text-sm">۱۹ فروردین ۱۴۰۳</div>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star text-accent"></i>
+                                    <i class="fas fa-star-half-alt text-accent"></i>
+                                </div>
+                            </div>
+                            <p class="review-text">
+                                به عنوان یک نوازنده حرفه‌ای دیجیریدو که زیاد سفر می‌کنم، این محصول واقعاً یک نجات‌دهنده بوده. قبلاً مجبور بودم سازم رو با خودم حمل کنم یا اجراهام رو کنسل کنم، اما الان می‌تونم به راحتی این دیجیریدو رو همراهم ببرم. تکنیک تنفس دایره‌ای به خوبی روی این ساز قابل اجراست و صدای غنی و عمیقی داره. فقط کاش کمی ارزان‌تر بود!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JjsJQXBKL1g" title="نمایش دیجیریدو مسافرتی" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h2 class="video-title">معرفی و نحوه استفاده از دیجیریدو مسافرتی</h2>
+                    <p class="video-description">
+                        در این ویدیو، نحوه اتصال قطعات دیجیریدو مسافرتی و تکنیک‌های اساسی نواختن آن را مشاهده می‌کنید. همچنین تفاوت‌های صوتی این مدل با مدل‌های یکپارچه و نکات مهم در مورد نگهداری و حمل آن توضیح داده شده است.
+                    </p>
+                    <p class="video-description mt-4">
+                        استاد نوازنده در این ویدیو، تکنیک‌های پیشرفته مانند تنفس دایره‌ای و ایجاد صداهای حیوانات را با استفاده از این دیجیریدو به نمایش می‌گذارد و نشان می‌دهد که علی‌رغم قابل حمل بودن، این ساز قابلیت‌های حرفه‌ای کاملی دارد.
+                    </p>
+                    <a href="https://wa.me/989195600767?text=سلام،%20بعد%20از%20دیدن%20ویدیوی%20معرفی%20دیجیریدو%20مسافرتی،%20مایل%20به%20کسب%20اطلاعات%20بیشتر%20هستم" class="btn-whatsapp mt-4" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        درخواست مشاوره
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Samples Section -->
+    <section class="audio-section">
+        <div class="container">
+            <h2 class="section-title">نمونه‌های صوتی</h2>
+            
+            <div class="audio-cards">
+                <div class="audio-card">
+                    <div class="audio-image">
+                        <img src="https://images.unsplash.com/photo-1519844911773-1dcefb620f0d?q=80&w=2069" alt="نمونه صدای پایه">
+                    </div>
+                    <div class="audio-content">
+                        <h3 class="audio-title">صدای پایه و اصلی</h3>
+                        <p class="audio-description">نمونه‌ای از صدای خالص و پایه دیجیریدو مسافرتی در نت C که نشان‌دهنده رزونانس و عمق صدای این ساز است.</p>
+                        <audio controls class="audio-player">
+                            <source src="https://assets.mixkit.co/music/preview/mixkit-tribal-ritual-drums-558.mp3" type="audio/mpeg">
+                            مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+                        </audio>
+                    </div>
+                </div>
+                
+                <div class="audio-card">
+                    <div class="audio-image">
+                        <img src="https://images.unsplash.com/photo-1521408860804-dcdc8accd833?q=80&w=2070" alt="تکنیک تنفس دایره‌ای">
+                    </div>
+                    <div class="audio-content">
+                        <h3 class="audio-title">تکنیک تنفس دایره‌ای</h3>
+                        <p class="audio-description">در این نمونه صوتی، تکنیک تنفس دایره‌ای و ریتم‌های مختلف قابل اجرا با دیجیریدو مسافرتی را می‌شنوید.</p>
+                        <audio controls class="audio-player">
+                            <source src="https://assets.mixkit.co/music/preview/mixkit-tribal-days-437.mp3" type="audio/mpeg">
+                            مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+                        </audio>
+                    </div>
+                </div>
+                
+                <div class="audio-card">
+                    <div class="audio-image">
+                        <img src="https://images.unsplash.com/photo-1539786774582-0707555f1f72?q=80&w=2080" alt="صداهای حیوانات">
+                    </div>
+                    <div class="audio-content">
+                        <h3 class="audio-title">صداهای حیوانات و افکت‌ها</h3>
+                        <p class="audio-description">مجموعه‌ای از تکنیک‌های پیشرفته برای تولید صداهای حیوانات استرالیایی و افکت‌های صوتی متنوع.</p>
+                        <audio controls class="audio-player">
+                            <source src="https://assets.mixkit.co/music/preview/mixkit-wild-camping-17.mp3" type="audio/mpeg">
+                            مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-section">
+        <div class="container">
+            <h2 class="section-title">محصولات مرتبط</h2>
+            
+            <div class="related-products">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=1935" alt="کیف حمل دیجیریدو">
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">کیف حمل دیجیریدو</h3>
+                        <div class="product-card-price">۳۵۰,۰۰۰ تومان</div>
+                        <a href="https://wa.me/989195600767?text=سلام،%20میخواستم%20درباره%20محصول%20کیف%20حمل%20دیجیریدو%20اطلاعات%20بیشتری%20کسب%20کنم" class="product-card-btn" target="_blank">مشاهده محصول</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1974" alt="موم زنبور عسل مخصوص دیجیریدو">
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">موم زنبور عسل مخصوص دیجیریدو</h3>
+                        <div class="product-card-price">۱۲۰,۰۰۰ تومان</div>
+                        <a href="https://wa.me/989195600767?text=سلام،%20میخواستم%20درباره%20محصول%20موم%20زنبور%20عسل%20مخصوص%20دیجیریدو%20اطلاعات%20بیشتری%20کسب%20کنم" class="product-card-btn" target="_blank">مشاهده محصول</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1626626912302-d51edbcb2f0c?q=80&w=2075" alt="ست آموزشی مبتدی دیجیریدو">
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">ست آموزشی مبتدی دیجیریدو</h3>
+                        <div class="product-card-price">۶۵۰,۰۰۰ تومان</div>
+                        <a href="https://wa.me/989195600767?text=سلام،%20میخواستم%20درباره%20محصول%20ست%20آموزشی%20مبتدی%20دیجیریدو%20اطلاعات%20بیشتری%20کسب%20کنم" class="product-card-btn" target="_blank">مشاهده محصول</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551895541-53ac843b9c32?q=80&w=1887" alt="دیجیریدو فایبرگلاس">
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">دیجیریدو فایبرگلاس - نت C</h3>
+                        <div class="product-card-price">۱,۷۰۰,۰۰۰ تومان</div>
+                        <a href="https://wa.me/989195600767?text=سلام،%20میخواستم%20درباره%20محصول%20دیجیریدو%20فایبرگلاس%20-%20نت%20C%20اطلاعات%20بیشتری%20کسب%20کنم" class="product-card-btn" target="_blank">مشاهده محصول</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="lightbox-nav">
+            <button class="lightbox-btn" id="lightboxPrev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-btn" id="lightboxNext">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <img src="" alt="تصویر بزرگ" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about-us">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-drum"></i>
+                        دیجیریدو سنتر
+                    </a>
+                    <p class="footer-about">مرکز تخصصی فروش دیجیریدو و آموزش نواختن این ساز باستانی با بیش از 7 سال تجربه در ارائه محصولات با کیفیت و خدمات ویژه به علاقه‌مندان موسیقی.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/989195600767" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h3 class="footer-title">دسترسی سریع</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">صفحه اصلی</a>
+                        <a href="#" class="footer-link">محصولات</a>
+                        <a href="#" class="footer-link">درباره ما</a>
+                        <a href="#" class="footer-link">تماس با ما</a>
+                        <a href="#" class="footer-link">سؤالات متداول</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h3 class="footer-title">محصولات</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">دیجیریدو چوبی</a>
+                        <a href="#" class="footer-link">دیجیریدو فایبرگلاس</a>
+                        <a href="#" class="footer-link">دیجیریدو مسافرتی</a>
+                        <a href="#" class="footer-link">بسته آموزشی</a>
+                        <a href="#" class="footer-link">لوازم جانبی</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h3 class="footer-title">تماس با ما</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">تهران، خیابان ولیعصر، پلاک 125</a>
+                        <a href="#" class="footer-link">021-88776655</a>
+                        <a href="https://wa.me/989195600767" class="footer-link" target="_blank">09195600767</a>
+                        <a href="#" class="footer-link">info@didgeridoocenter.ir</a>
+                        <a href="#" class="footer-link">شنبه تا پنجشنبه 10 الی 19</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 1404 دیجیریدو سنتر. کلیه حقوق محفوظ است. طراحی و توسعه توسط <a href="#">استودیو طراحی وب</a></p>
+                <p>قوانین و مقررات | حریم خصوصی</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.btn-menu');
+        const closeBtn = document.querySelector('.menu-close');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const overlay = document.querySelector('.overlay');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        // Tabs Functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Gallery Thumbnail Functionality
+        const galleryThumbs = document.querySelectorAll('.gallery-thumb');
+        const mainImage = document.getElementById('mainImage');
+
+        galleryThumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                // Remove active class from all thumbnails
+                galleryThumbs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked thumbnail
+                thumb.classList.add('active');
+                
+                // Update main image
+                const imgSrc = thumb.getAttribute('data-img');
+                mainImage.src = imgSrc;
+            });
+        });
+
+        // Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        let currentImgIndex = 0;
+        const galleryImages = Array.from(galleryThumbs).map(thumb => thumb.getAttribute('data-img'));
+
+        // Open lightbox when main image is clicked
+        mainImage.addEventListener('click', () => {
+            lightboxImg.src = mainImage.src;
+            currentImgIndex = galleryImages.findIndex(src => src === mainImage.src);
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close lightbox
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Navigate to previous image
+        lightboxPrev.addEventListener('click', () => {
+            currentImgIndex = (currentImgIndex - 1 + galleryImages.length) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentImgIndex];
+        });
+
+        // Navigate to next image
+        lightboxNext.addEventListener('click', () => {
+            currentImgIndex = (currentImgIndex + 1) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentImgIndex];
+        });
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                } else if (e.key === 'ArrowLeft') {
+                    lightboxPrev.click();
+                } else if (e.key === 'ArrowRight') {
+                    lightboxNext.click();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
